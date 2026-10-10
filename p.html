@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Adat Jawa - Andi & Sarah</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Marcellus&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- AUDIO BACKSOUND -->
+    <audio id="bg-music" loop>
+        <source src="Assets/mus.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- TAMPILAN AWAL (COVER) -->
+    <div id="cover">
+        <!-- VIDEO COVER -->
+        <video class="cover-video-bg" autoplay loop muted playsinline>
+            <source src="Assets/vic.mp4" type="video/mp4">
+        </video>
+        <div class="cover-overlay"></div>
+
+        <div class="cover-content">
+            <p class="subtitle">SERAT ULEM KASMARAN</p>
+            <h1 class="bride-groom-title">Andi & Sarah</h1>
+            
+            <!-- 2 Foto Pengantin di Cover Awal -->
+            <div class="cover-couple-photos">
+                <div class="photo-frame">
+                    <img src="Assets/lak.jpg" alt="Mempelai Pria" class="couple-thumb">
+                    <span>A N D I</span>
+                </div>
+                <div class="photo-frame">
+                    <img src="Assets/per.jpg" alt="Mempelai Wanita" class="couple-thumb">
+                    <span>S A R A H</span>
+                </div>
+            </div>
+
+            <p class="to-text">Katur dhumateng Bapak/Ibu/Saudara/i:</p>
+            <h3 id="tamu-nama">Tamu Undangan</h3>
+            
+            <button class="btn-buka" onclick="bukaUndangan()">
+                <span class="btn-text">BUKA UNDANGAN</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- KONTEN UTAMA WEB -->
+    <div id="main-content">
+        <!-- Pembuka Adat -->
+        <section class="section adat-intro">
+            <p class="javanese-script">ꦧꦱ꧀ꦩꦭ꧀ꦭꦃꦫꦃꦩꦤ꧀ꦫꦲꦶꦩ꧀</p>
+            <p class="invitation-text">
+                "Mugi-mugi Gusti Allah tansah tinuntun ing keslametan, kabagaswaran, dhumateng kita sedaya."
+            </p>
+        </section>
+
+        <!-- Bagian Mempelai -->
+        <section class="section mempelai">
+            <h2 class="gold-title">Mempelai</h2>
+            <p class="sub-intro">Kanthi panyuwun saha linambaran sih wilasaning Gusti Ingkang Maha Agung, kami bermaksud menyelenggarakan syukuran pernikahan putra-putri kami:</p>
+            
+            <div class="couple-container">
+                <div class="mempelai-detail">
+                    <h3>Andi Susanto, S.T.</h3>
+                    <p class="mempelai-ortu">Putra kapisan saking Bapak Shofiudin & Ibu Siti</p>
+                </div>
+                <div class="ampersand">&</div>
+                <div class="mempelai-detail">
+                    <h3>Sarah Widiarti, S.Pd.</h3>
+                    <p class="mempelai-ortu">Putri kapindho saking Bapak Muchibin & Ibu Chabibah</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kisah Kami dengan Video -->
+        <section class="section story">
+            <h2 class="gold-title">Kisah Kami</h2>
+            <p class="story-desc">Reroncen crita asmara ingkang kebak berkah.</p>
+            
+            <div class="video-container">
+                <video class="story-video" controls>
+                    <source src="Assets/vd3.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video HTML5.
+                </video>
+            </div>
+        </section>
+
+        <!-- Tombol Buka Galeri Terpisah -->
+        <section class="section galeri-akses">
+            <h2 class="gold-title">Momen Bahagia</h2>
+            <p>Klik tombol di bawah ini untuk melihat 4 foto dan 2 video kenangan kami.</p>
+            <button class="btn-buka" onclick="bukaGaleriPage()">
+                <span class="btn-text">BUKA ALBUM GALERI</span>
+            </button>
+        </section>
+
+        <footer class="footer">
+            <p>Matur Nuwun</p>
+        </footer>
+    </div>
+
+    <!-- HALAMAN GALERI KHUSUS (TERPISAH) -->
+    <div id="galeri-page">
+        <div class="galeri-header">
+            <button class="btn-kembali" onclick="tutupGaleriPage()">⬅ KEMBALI KE UNDANGAN</button>
+            <h2 class="gold-title" style="margin-top: 20px;">Galeri Kenangan</h2>
+        </div>
+
+        <div class="galeri-container">
+            <!-- 4 FOTO -->
+            <div class="grid-item foto-item">
+                <img src="Assets/fo1.jpg" alt="Foto Kenangan 1">
+            </div>
+            <div class="grid-item foto-item">
+                <img src="Assets/fo2.jpg" alt="Foto Kenangan 2">
+            </div>
+            <div class="grid-item foto-item">
+                <img src="Assets/fo3.jpg" alt="Foto Kenangan 3">
+            </div>
+            <div class="grid-item foto-item">
+                <img src="Assets/fo4.jpg" alt="Foto Kenangan 4">
+            </div>
+
+            <!-- 2 VIDEO -->
+            <div class="grid-item video-item">
+                <video controls style="width: 100%;">
+                    <source src="Assets/vd1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="grid-item video-item">
+                <video controls style="width: 100%;">
+                    <source src="Assets/vd2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
